@@ -401,7 +401,17 @@ If you found this project helpful, please give it a ⭐️! It helps others disc
 
 ---
 
-## 📖 Additional Resources
+## 📖 Documentation
+
+### Comprehensive Guides
+
+- 📘 **[Getting Started Guide](docs/GETTING_STARTED.md)** - Complete beginner's guide
+- 📗 **[API Reference](docs/API_REFERENCE.md)** - Detailed API documentation
+- 📙 **[Best Practices](docs/BEST_PRACTICES.md)** - Industry best practices
+- 📕 **[Troubleshooting Guide](docs/TROUBLESHOOTING.md)** - Common issues and solutions
+- 📔 **[FAQ](docs/FAQ.md)** - Frequently asked questions
+
+### External Resources
 
 - [REST Assured Documentation](https://rest-assured.io/)
 - [TestNG Documentation](https://testng.org/doc/)
