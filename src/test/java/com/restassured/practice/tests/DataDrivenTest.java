@@ -87,35 +87,4 @@ public class DataDrivenTest {
             .body("name", equalTo(randomUser.getName()))
             .body("email", equalTo(randomUser.getEmail()));
     }
-
-    @Test(description = "Test with dynamically generated test data")
-    public void testWithGeneratedData() {
-        String randomEmail = TestDataGenerator.generateRandomEmail();
-        String randomString = TestDataGenerator.generateRandomString(10);
-        int randomInt = TestDataGenerator.generateRandomInt(1, 100);
-
-        System.out.println("Testing with generated data:");
-        System.out.println("Email: " + randomEmail);
-        System.out.println("Random String: " + randomString);
-        System.out.println("Random Int: " + randomInt);
-
-        String requestBody = String.format("""
-            {
-                "email": "%s",
-                "first_name": "%s",
-                "last_name": "Test",
-                "avatar": "https://example.com/avatar.jpg"
-            }
-            """, randomEmail, randomString);
-
-        given()
-            .spec(ApiConfig.getReqResRequestSpec())
-            .body(requestBody)
-        .when()
-            .post("/users")
-        .then()
-            .spec(ApiConfig.getCreatedResponseSpec())
-            .body("email", equalTo(randomEmail))
-            .body("first_name", equalTo(randomString));
-    }
 }

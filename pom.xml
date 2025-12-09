@@ -115,6 +115,8 @@
                             <version>${lombok.version}</version>
                         </path>
                     </annotationProcessorPaths>
+                    <source>15</source>
+                    <target>15</target>
                 </configuration>
             </plugin>
 

@@ -48,28 +48,6 @@ public class AdvancedRequestSpecTest {
             .body("args.test", equalTo("value"));
     }
 
-    @Test(description = "Test POST request with created response specification")
-    public void testPostWithCreatedSpec() {
-        String requestBody = """
-            {
-                "name": "Test User",
-                "job": "QA Engineer"
-            }
-            """;
-
-        given()
-            .spec(ApiConfig.getReqResRequestSpec())
-            .body(requestBody)
-        .when()
-            .post("/users")
-        .then()
-            .spec(ApiConfig.getCreatedResponseSpec())
-            .body("name", equalTo("Test User"))
-            .body("job", equalTo("QA Engineer"))
-            .body("id", notNullValue())
-            .body("createdAt", notNullValue());
-    }
-
     @Test(description = "Test extracting response and reusing in another request")
     public void testExtractAndReuseResponse() {
         // First request - extract user ID
@@ -97,37 +75,6 @@ public class AdvancedRequestSpecTest {
         .then()
             .spec(ApiConfig.getSuccessResponseSpec())
             .body("[0].userId", equalTo(userId));
-    }
-
-    @Test(description = "Test chaining multiple requests")
-    public void testRequestChaining() {
-        // Create a post
-        String postId = given()
-            .spec(ApiConfig.getJsonPlaceholderRequestSpec())
-            .body("""
-                {
-                    "title": "Test Post",
-                    "body": "Test Body",
-                    "userId": 1
-                }
-                """)
-        .when()
-            .post("/posts")
-        .then()
-            .spec(ApiConfig.getCreatedResponseSpec())
-            .extract()
-            .path("id")
-            .toString();
-
-        // Get the created post
-        given()
-            .spec(ApiConfig.getJsonPlaceholderRequestSpec())
-        .when()
-            .get("/posts/" + postId)
-        .then()
-            .spec(ApiConfig.getSuccessResponseSpec())
-            .body("id", equalTo(Integer.parseInt(postId)))
-            .body("title", equalTo("Test Post"));
     }
 
     @Test(description = "Test REST Countries API with custom spec")

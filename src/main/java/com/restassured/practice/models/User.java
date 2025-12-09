@@ -18,4 +18,5 @@ public class User {
     private String job;
     private String createdAt;
     private String updatedAt;
+    private String username;
 }
