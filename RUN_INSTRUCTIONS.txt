@@ -1,0 +1,213 @@
+================================================================================
+                    RESTASSURED PRACTICE PROJECT
+                        RUN INSTRUCTIONS
+================================================================================
+
+CURRENT STATUS:
+✓ Project structure is complete
+✓ All test files created (10 test classes)
+✓ All model files created (3 POJOs)
+✓ All schema files created (5 schemas)
+✓ Maven configuration complete
+✓ TestNG configuration complete
+
+NOTE: Maven is NOT installed on your system.
+
+================================================================================
+                    RECOMMENDED APPROACH (EASIEST)
+================================================================================
+
+STEP 1: Install IntelliJ IDEA Community Edition (FREE)
+   
+   Download from: https://www.jetbrains.com/idea/download/
+   
+   Why IntelliJ?
+   - Has Maven built-in (no separate installation needed)
+   - Automatic dependency download
+   - Easy test execution with right-click
+   - Great for beginners
+
+STEP 2: Open Project in IntelliJ
+
+   1. Launch IntelliJ IDEA
+   2. Click "Open" on welcome screen
+   3. Navigate to this folder: "RestAssured Practice"
+   4. Click "OK"
+   5. Wait 2-5 minutes for IntelliJ to download dependencies
+      (Watch the bottom status bar)
+
+STEP 3: Run Your First Test
+
+   1. Navigate to: 
+      src/test/java/com/restassured/practice/tests/BasicGetRequestTest.java
+   
+   2. Right-click on the file name
+   
+   3. Select "Run 'BasicGetRequestTest'"
+   
+   4. See results in the bottom panel!
+
+STEP 4: Run All Tests
+
+   1. Right-click on "testng.xml" file in project root
+   2. Select "Run testng.xml"
+   3. All 10 test classes will execute
+
+================================================================================
+                    ALTERNATIVE: INSTALL MAVEN
+================================================================================
+
+If you prefer command line or want to learn Maven:
+
+STEP 1: Download Maven
+   https://maven.apache.org/download.cgi
+   (Download the Binary zip archive)
+
+STEP 2: Extract Maven
+   Extract to: C:\Program Files\Apache\maven
+
+STEP 3: Set Environment Variables
+   
+   Open PowerShell as Administrator and run:
+   
+   setx MAVEN_HOME "C:\Program Files\Apache\maven" /M
+   setx PATH "%PATH%;%MAVEN_HOME%\bin" /M
+
+STEP 4: Verify Installation
+   
+   Close and reopen PowerShell, then run:
+   mvn --version
+
+STEP 5: Build and Run Tests
+   
+   cd "RestAssured Practice"
+   mvn clean install
+   mvn test
+
+================================================================================
+                    PROJECT STRUCTURE
+================================================================================
+
+RestAssured Practice/
+│
+├── pom.xml                          # Maven dependencies
+├── testng.xml                       # TestNG suite configuration
+├── README.md                        # Project overview
+├── QUICK_START.md                   # Quick start guide
+├── SETUP_GUIDE.md                   # Detailed setup instructions
+│
+├── src/main/java/
+│   └── com/restassured/practice/
+│       ├── models/                  # POJO classes
+│       │   ├── Post.java
+│       │   ├── User.java
+│       │   └── ReqResUser.java
+│       └── utils/                   # Utility classes
+│           └── ConfigReader.java
+│
+└── src/test/
+    ├── java/com/restassured/practice/tests/
+    │   ├── BasicGetRequestTest.java           # START HERE
+    │   ├── PostRequestTest.java
+    │   ├── PutPatchDeleteTest.java
+    │   ├── QueryParametersTest.java
+    │   ├── PathParametersTest.java
+    │   ├── HeadersAndCookiesTest.java
+    │   ├── AuthenticationTest.java
+    │   ├── JsonSchemaValidationTest.java
+    │   ├── SerializationDeserializationTest.java
+    │   └── FileUploadDownloadTest.java
+    │
+    └── resources/
+        ├── schemas/                  # JSON schema files
+        │   ├── user-schema.json
+        │   ├── post-schema.json
+        │   ├── posts-schema.json
+        │   ├── reqres-user-schema.json
+        │   └── comments-schema.json
+        └── testdata/                 # Test data files (empty - for your use)
+
+================================================================================
+                    WHAT YOU CAN PRACTICE
+================================================================================
+
+✓ GET Requests & Response Validation
+✓ POST Requests & Request Bodies
+✓ PUT/PATCH/DELETE Operations
+✓ Query Parameters & Filtering
+✓ Path Parameters & Dynamic URLs
+✓ Headers & Cookies
+✓ Authentication (Basic, Bearer, API Key)
+✓ JSON Schema Validation
+✓ Serialization/Deserialization (POJO ↔ JSON)
+✓ File Upload/Download
+✓ Response Time Validation
+✓ Status Code Assertions
+✓ JSON Path Expressions
+✓ Hamcrest Matchers
+
+================================================================================
+                    LEARNING PATH
+================================================================================
+
+BEGINNER:
+1. BasicGetRequestTest.java         - Start here!
+2. PostRequestTest.java
+3. QueryParametersTest.java
+4. PathParametersTest.java
+
+INTERMEDIATE:
+5. PutPatchDeleteTest.java
+6. HeadersAndCookiesTest.java
+7. AuthenticationTest.java
+
+ADVANCED:
+8. SerializationDeserializationTest.java
+9. JsonSchemaValidationTest.java
+10. FileUploadDownloadTest.java
+
+================================================================================
+                    IMPORTANT NOTES
+================================================================================
+
+✓ All tests use FREE public APIs (no signup required)
+✓ Tests may fail if APIs are down or rate-limited - this is normal
+✓ Internet connection required to run tests
+✓ Each test is independent - run them in any order
+✓ All code is well-commented - read and learn!
+
+================================================================================
+                    QUICK COMMANDS
+================================================================================
+
+Check Setup:
+   .\verify-setup.ps1
+
+Open in IntelliJ:
+   1. Download from: https://www.jetbrains.com/idea/download/
+   2. Open → Select "RestAssured Practice" folder
+   3. Wait for dependencies download
+   4. Right-click test class → Run
+
+With Maven (if installed):
+   mvn clean install           # Build project
+   mvn test                    # Run all tests
+   mvn test -Dtest=BasicGetRequestTest   # Run specific test
+
+================================================================================
+                    NEED HELP?
+================================================================================
+
+Read these files:
+   - QUICK_START.md       - Quick start guide
+   - SETUP_GUIDE.md       - Detailed setup instructions
+   - README.md            - Project overview
+
+Run verification:
+   .\verify-setup.ps1
+
+================================================================================
+
+                        HAPPY TESTING! 🚀
+
+================================================================================

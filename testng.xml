@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="RestAssured Practice Suite" verbose="1">
+    <test name="API Tests">
+        <classes>
+            <class name="com.restassured.practice.tests.BasicGetRequestTest"/>
+            <class name="com.restassured.practice.tests.PostRequestTest"/>
+            <class name="com.restassured.practice.tests.PutPatchDeleteTest"/>
+            <class name="com.restassured.practice.tests.QueryParametersTest"/>
+            <class name="com.restassured.practice.tests.PathParametersTest"/>
+            <class name="com.restassured.practice.tests.HeadersAndCookiesTest"/>
+            <class name="com.restassured.practice.tests.AuthenticationTest"/>
+            <class name="com.restassured.practice.tests.JsonSchemaValidationTest"/>
+            <class name="com.restassured.practice.tests.SerializationDeserializationTest"/>
+            <class name="com.restassured.practice.tests.FileUploadDownloadTest"/>
+        </classes>
+    </test>
+</suite>
