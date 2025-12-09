@@ -1,5 +1,6 @@
 # REST Assured API Testing Framework 🚀
 
+[![Java CI with Maven](https://github.com/beingtush/rest-assured-practice/actions/workflows/maven-test.yml/badge.svg)](https://github.com/beingtush/rest-assured-practice/actions/workflows/maven-test.yml)
 [![Java](https://img.shields.io/badge/Java-11%2B-orange?style=flat&logo=java)](https://www.oracle.com/java/)
 [![Maven](https://img.shields.io/badge/Maven-3.6%2B-blue?style=flat&logo=apache-maven)](https://maven.apache.org/)
 [![REST Assured](https://img.shields.io/badge/REST%20Assured-5.3.0-green?style=flat)](https://rest-assured.io/)
