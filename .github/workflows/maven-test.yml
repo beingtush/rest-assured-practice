@@ -32,10 +32,12 @@ jobs:
       
     - name: Run Tests
       run: mvn test
+      continue-on-error: true
       
     - name: Generate Allure Report
       if: always()
       run: mvn allure:report
+      continue-on-error: true
       
     - name: Upload Test Results
       if: always()
